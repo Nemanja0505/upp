@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.13.0">
+    <businessObjects>
+        <businessObject qualifiedName="mas_it_company.model.Intervju">
+            <fields>
+                <field type="LONG" length="255" name="hr_intervjuer" nullable="false" collection="false"/>
+                <field type="LONG" length="255" name="tehnicki_intervjuer" nullable="false" collection="false"/>
+                <field type="LONG" length="255" name="intervjuer_za_jezike" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="mas_it_company.model.PrijavaZaPosao" fetchType="EAGER" name="prijava_za_oglas" nullable="false" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="ponudjeni_termini" nullable="true" collection="true"/>
+                <field type="LOCALDATETIME" length="255" name="odabrani_termin" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="mas_it_company.model.TaskZaIntervju" fetchType="LAZY" name="taskovi" nullable="true" collection="true"/>
+                <relationField type="AGGREGATION" reference="mas_it_company.model.StatusIntervjua" fetchType="EAGER" name="status" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="mas_it_company.model.LicnaProcenaKandidata">
+            <fields>
+                <field type="STRING" length="255" name="naziv" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="mas_it_company.model.Obrazovanje">
+            <fields>
+                <field type="STRING" length="255" name="naziv" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="oznaka" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="mas_it_company.model.PonudaZaPosao">
+            <fields>
+                <field type="STRING" length="255" name="naziv" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="opis" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="mas_it_company.model.Senioritet" fetchType="EAGER" name="senioritet" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="mesto" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="oblast" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="jezici" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="tehnologije" nullable="true" collection="true"/>
+                <field type="LOCALDATETIME" length="255" name="rok_za_prijavu" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="mas_it_company.model.PrijavaZaPosao">
+            <fields>
+                <field type="STRING" length="255" name="ime" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="prezime" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="email" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="adresa" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="mas_it_company.model.Obrazovanje" fetchType="EAGER" name="stepen_strucne_spteme" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="cv" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="propratno_pismo" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="odobrena" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="datum_kreiranja" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="konacno_odobrenje" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="mas_it_company.model.PonudaZaPosao" fetchType="EAGER" name="ponuda_za_posao" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="mas_it_company.model.Senioritet">
+            <fields>
+                <field type="STRING" length="255" name="naziv" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="mas_it_company.model.StatusIntervjua">
+            <fields>
+                <field type="STRING" length="255" name="naziv" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="mas_it_company.model.TaskZaIntervju">
+            <fields>
+                <field type="LONG" length="255" name="intervjuer" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="mas_it_company.model.LicnaProcenaKandidata" fetchType="LAZY" name="licna_procena_kandidata" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="oblast" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="ocena" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="kratak_opis_utiska" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>
