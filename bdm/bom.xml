@@ -40,8 +40,8 @@
                 <relationField type="AGGREGATION" reference="mas_it_company.model.Senioritet" fetchType="EAGER" name="senioritet" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="mesto" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="oblast" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="jezici" nullable="true" collection="true"/>
-                <field type="STRING" length="255" name="tehnologije" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="jezik" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="tehnologija" nullable="true" collection="true"/>
                 <field type="LOCALDATETIME" length="255" name="rok_za_prijavu" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
@@ -58,7 +58,7 @@
                 <field type="STRING" length="255" name="cv" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="propratno_pismo" nullable="false" collection="false"/>
                 <field type="BOOLEAN" length="255" name="odobrena" nullable="true" collection="false"/>
-                <field type="LOCALDATETIME" length="255" name="datum_kreiranja" nullable="false" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="datum_kreiranja" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="konacno_odobrenje" nullable="true" collection="false"/>
                 <relationField type="AGGREGATION" reference="mas_it_company.model.PonudaZaPosao" fetchType="EAGER" name="ponuda_za_posao" nullable="false" collection="false"/>
             </fields>
