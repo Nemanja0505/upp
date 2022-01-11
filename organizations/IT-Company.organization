@@ -104,8 +104,8 @@
     </role>
   </roles>
   <groups>
-    <group name="Klijenti">
-      <displayName>Klijenti</displayName>
+    <group name="Kandidati">
+      <displayName>Kandidati</displayName>
     </group>
     <group name="HR_sluzba" parentPath="/Firma">
       <displayName>HR sluzba</displayName>
@@ -121,7 +121,7 @@
     <membership>
       <userName>pera</userName>
       <roleName>Clan</roleName>
-      <groupName>Klijenti</groupName>
+      <groupName>Kandidati</groupName>
     </membership>
     <membership>
       <userName>mika</userName>

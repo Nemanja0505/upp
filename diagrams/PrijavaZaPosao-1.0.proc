@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+  <process:MainProcess xmi:id="_pq5YUHK6EeyL45GqIi9CJQ" name="PrijavaZaPosao" author="NEMANJA" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004">
+    <elements xmi:type="process:Pool" xmi:id="_pq5_YHK6EeyL45GqIi9CJQ" name="PrijavaZaPosao">
+      <elements xmi:type="process:Lane" xmi:id="_pq5_YXK6EeyL45GqIi9CJQ" name="Kandidat lane" actor="_QjF7gHK8EeyL45GqIi9CJQ">
+        <elements xmi:type="process:StartEvent" xmi:id="_pq5_YnK6EeyL45GqIi9CJQ" name="Start1" outgoing="_plJX0HLJEey8rZGamqsT1g">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_pq5_Y3K6EeyL45GqIi9CJQ" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_pq5_ZHK6EeyL45GqIi9CJQ" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_pq5_ZXK6EeyL45GqIi9CJQ" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:Task" xmi:id="__BYP4HLJEey8rZGamqsT1g" name="Slanje prijave" incoming="_plJX0HLJEey8rZGamqsT1g" overrideActorsOfTheLane="false">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_o4H5wHLJEey8rZGamqsT1g" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_o4HSsHLJEey8rZGamqsT1g" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_o4H5wXLJEey8rZGamqsT1g" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_Tc__gHLKEey8rZGamqsT1g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Tc__gXLKEey8rZGamqsT1g" name="prijava" content="prijava" type="TYPE_VARIABLE" returnType="mas_it_company.model.PrijavaZaPosao">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Tc__gnLKEey8rZGamqsT1g" name="prijava" dataType="_pq5_k3K6EeyL45GqIi9CJQ" className="mas_it_company.model.PrijavaZaPosao"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Tc__g3LKEey8rZGamqsT1g" name="prijavaInput.ime" content="prijavaInput?.ime" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Tc__hHLKEey8rZGamqsT1g" name="prijavaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Tc__hXLKEey8rZGamqsT1g" type="JAVA_METHOD" expression="setIme">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Tc__hnLKEey8rZGamqsT1g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Tc__h3LKEey8rZGamqsT1g" name="prijava" content="prijava" type="TYPE_VARIABLE" returnType="mas_it_company.model.PrijavaZaPosao">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Tc__iHLKEey8rZGamqsT1g" name="prijava" dataType="_pq5_k3K6EeyL45GqIi9CJQ" className="mas_it_company.model.PrijavaZaPosao"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Tc__iXLKEey8rZGamqsT1g" name="prijavaInput.prezime" content="prijavaInput?.prezime" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Tc__inLKEey8rZGamqsT1g" name="prijavaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Tc__i3LKEey8rZGamqsT1g" type="JAVA_METHOD" expression="setPrezime">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Tc__jHLKEey8rZGamqsT1g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Tc__jXLKEey8rZGamqsT1g" name="prijava" content="prijava" type="TYPE_VARIABLE" returnType="mas_it_company.model.PrijavaZaPosao">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Tc__jnLKEey8rZGamqsT1g" name="prijava" dataType="_pq5_k3K6EeyL45GqIi9CJQ" className="mas_it_company.model.PrijavaZaPosao"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Tc__j3LKEey8rZGamqsT1g" name="prijavaInput.email" content="prijavaInput?.email" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Tc__kHLKEey8rZGamqsT1g" name="prijavaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Tc__kXLKEey8rZGamqsT1g" type="JAVA_METHOD" expression="setEmail">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Tc__knLKEey8rZGamqsT1g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Tc__k3LKEey8rZGamqsT1g" name="prijava" content="prijava" type="TYPE_VARIABLE" returnType="mas_it_company.model.PrijavaZaPosao">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Tc__lHLKEey8rZGamqsT1g" name="prijava" dataType="_pq5_k3K6EeyL45GqIi9CJQ" className="mas_it_company.model.PrijavaZaPosao"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Tc__lXLKEey8rZGamqsT1g" name="prijavaInput.adresa" content="prijavaInput?.adresa" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Tc__lnLKEey8rZGamqsT1g" name="prijavaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Tc__l3LKEey8rZGamqsT1g" type="JAVA_METHOD" expression="setAdresa">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Tc__mHLKEey8rZGamqsT1g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Tc__mXLKEey8rZGamqsT1g" name="prijava" content="prijava" type="TYPE_VARIABLE" returnType="mas_it_company.model.PrijavaZaPosao">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Tc__mnLKEey8rZGamqsT1g" name="prijava" dataType="_pq5_k3K6EeyL45GqIi9CJQ" className="mas_it_company.model.PrijavaZaPosao"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Tc__m3LKEey8rZGamqsT1g" name="prijavaInput.stepen_strucne_spteme" content="//Retrieve aggregated Obrazovanje using its DAO and persistenceId&#xD;&#xA;def obrazovanjeVar = obrazovanjeDAO.findByPersistenceId(prijavaInput?.stepen_strucne_spteme?.persistenceId_string?.trim() ? prijavaInput.stepen_strucne_spteme.persistenceId_string.toLong() : null)&#xD;&#xA;if (!obrazovanjeVar) {&#xD;&#xA;&#x9;if (prijavaInput?.stepen_strucne_spteme?.persistenceId_string?.trim() ? prijavaInput.stepen_strucne_spteme.persistenceId_string.toLong() : null) {&#xD;&#xA;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `Obrazovanje` with the persistence id &quot; + prijavaInput?.stepen_strucne_spteme?.persistenceId_string?.trim() ? prijavaInput.stepen_strucne_spteme.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;return null&#xD;&#xA;}&#xD;&#xA;return obrazovanjeVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="mas_it_company.model.Obrazovanje">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Tc__nHLKEey8rZGamqsT1g" name="prijavaInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_Tc__nXLKEey8rZGamqsT1g" name="obrazovanjeDAO" content="obrazovanjeDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="mas_it_company.model.ObrazovanjeDAO" returnTypeFixed="true"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Tc__nnLKEey8rZGamqsT1g" type="JAVA_METHOD" expression="setStepen_strucne_spteme">
+              <inputTypes>mas_it_company.model.Obrazovanje</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Tc__n3LKEey8rZGamqsT1g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Tc__oHLKEey8rZGamqsT1g" name="prijava" content="prijava" type="TYPE_VARIABLE" returnType="mas_it_company.model.PrijavaZaPosao">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Tc__oXLKEey8rZGamqsT1g" name="prijava" dataType="_pq5_k3K6EeyL45GqIi9CJQ" className="mas_it_company.model.PrijavaZaPosao"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Tc__onLKEey8rZGamqsT1g" name="prijavaInput.cv" content="prijavaInput?.cv" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Tc__o3LKEey8rZGamqsT1g" name="prijavaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Tc__pHLKEey8rZGamqsT1g" type="JAVA_METHOD" expression="setCv">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Tc__pXLKEey8rZGamqsT1g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Tc__pnLKEey8rZGamqsT1g" name="prijava" content="prijava" type="TYPE_VARIABLE" returnType="mas_it_company.model.PrijavaZaPosao">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Tc__p3LKEey8rZGamqsT1g" name="prijava" dataType="_pq5_k3K6EeyL45GqIi9CJQ" className="mas_it_company.model.PrijavaZaPosao"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Tc__qHLKEey8rZGamqsT1g" name="prijavaInput.propratno_pismo" content="prijavaInput?.propratno_pismo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Tc__qXLKEey8rZGamqsT1g" name="prijavaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Tc__qnLKEey8rZGamqsT1g" type="JAVA_METHOD" expression="setPropratno_pismo">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Tc__q3LKEey8rZGamqsT1g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Tc__rHLKEey8rZGamqsT1g" name="prijava" content="prijava" type="TYPE_VARIABLE" returnType="mas_it_company.model.PrijavaZaPosao">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Tc__rXLKEey8rZGamqsT1g" name="prijava" dataType="_pq5_k3K6EeyL45GqIi9CJQ" className="mas_it_company.model.PrijavaZaPosao"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Tc__rnLKEey8rZGamqsT1g" name="danasnji_datum" content="return danasnji_datum" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDateTime">
+              <referencedElements xmi:type="process:Data" xmi:id="_nxH_AHLVEey8rZGamqsT1g" name="danasnji_datum" dataType="_pq5_jHK6EeyL45GqIi9CJQ"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Tc__sHLKEey8rZGamqsT1g" type="JAVA_METHOD" expression="setDatum_kreiranja">
+              <inputTypes>java.time.LocalDateTime</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Tc__sXLKEey8rZGamqsT1g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Tc__snLKEey8rZGamqsT1g" name="prijava" content="prijava" type="TYPE_VARIABLE" returnType="mas_it_company.model.PrijavaZaPosao">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Tc__s3LKEey8rZGamqsT1g" name="prijava" dataType="_pq5_k3K6EeyL45GqIi9CJQ" className="mas_it_company.model.PrijavaZaPosao"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Tc__tHLKEey8rZGamqsT1g" name="prijavaInput.ponuda_za_posao" content="//Retrieve aggregated PonudaZaPosao using its DAO and persistenceId&#xD;&#xA;def ponudaZaPosaoVar = ponudaZaPosaoDAO.findByPersistenceId(prijavaInput?.ponuda_za_posao?.persistenceId_string?.trim() ? prijavaInput.ponuda_za_posao.persistenceId_string.toLong() : null)&#xD;&#xA;if (!ponudaZaPosaoVar) {&#xD;&#xA;&#x9;if (prijavaInput?.ponuda_za_posao?.persistenceId_string?.trim() ? prijavaInput.ponuda_za_posao.persistenceId_string.toLong() : null) {&#xD;&#xA;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `PonudaZaPosao` with the persistence id &quot; + prijavaInput?.ponuda_za_posao?.persistenceId_string?.trim() ? prijavaInput.ponuda_za_posao.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;return null&#xD;&#xA;}&#xD;&#xA;return ponudaZaPosaoVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="mas_it_company.model.PonudaZaPosao">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Tc__tXLKEey8rZGamqsT1g" name="prijavaInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_Tc__tnLKEey8rZGamqsT1g" name="ponudaZaPosaoDAO" content="ponudaZaPosaoDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="mas_it_company.model.PonudaZaPosaoDAO" returnTypeFixed="true"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Tc__t3LKEey8rZGamqsT1g" type="JAVA_METHOD" expression="setPonuda_za_posao">
+              <inputTypes>mas_it_company.model.PonudaZaPosao</inputTypes>
+            </operator>
+          </operations>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_o4Ig0HLJEey8rZGamqsT1g" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_o4Ig0XLJEey8rZGamqsT1g" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_o4Ig0nLJEey8rZGamqsT1g" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_o4Ju8HLJEey8rZGamqsT1g" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_o4JH4HLJEey8rZGamqsT1g" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <formMapping xmi:type="process:FormMapping" xmi:id="__BaFFHLJEey8rZGamqsT1g">
+            <targetForm xmi:type="expression:Expression" xmi:id="_056bMHLKEey8rZGamqsT1g" name="prijavaForm" content="c475f481-90d6-4a47-96ce-7f0581b167bb" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+          </formMapping>
+          <contract xmi:type="process:Contract" xmi:id="__BaFE3LJEey8rZGamqsT1g">
+            <inputs xmi:type="process:ContractInput" xmi:id="_Tc-KUHLKEey8rZGamqsT1g" name="prijavaInput" type="COMPLEX" dataReference="prijava" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_Tc-xYHLKEey8rZGamqsT1g" name="ime" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Tc-xYXLKEey8rZGamqsT1g" name="prezime" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Tc-xYnLKEey8rZGamqsT1g" name="email" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Tc-xY3LKEey8rZGamqsT1g" name="adresa" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Tc-xZHLKEey8rZGamqsT1g" name="stepen_strucne_spteme" type="COMPLEX" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_Tc-xZXLKEey8rZGamqsT1g" name="persistenceId_string" createMode="false"/>
+              </inputs>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Tc-xZnLKEey8rZGamqsT1g" name="cv" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Tc-xZ3LKEey8rZGamqsT1g" name="propratno_pismo" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Tc-xaHLKEey8rZGamqsT1g" name="datum_kreiranja" type="LOCALDATETIME" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Tc-xaXLKEey8rZGamqsT1g" name="ponuda_za_posao" type="COMPLEX" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_Tc-xanLKEey8rZGamqsT1g" name="persistenceId_string" createMode="false"/>
+              </inputs>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_Tc_YcHLKEey8rZGamqsT1g" expression="prijavaInput?.ime != null" errorMessage="ime is mandatory for PrijavaZaPosao" name="mandatory_prijavaInput_ime">
+              <inputNames>prijavaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_Tc_YcXLKEey8rZGamqsT1g" expression="prijavaInput?.prezime != null" errorMessage="prezime is mandatory for PrijavaZaPosao" name="mandatory_prijavaInput_prezime">
+              <inputNames>prijavaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_Tc_YcnLKEey8rZGamqsT1g" expression="prijavaInput?.email != null" errorMessage="email is mandatory for PrijavaZaPosao" name="mandatory_prijavaInput_email">
+              <inputNames>prijavaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_Tc_Yc3LKEey8rZGamqsT1g" expression="prijavaInput?.adresa != null" errorMessage="adresa is mandatory for PrijavaZaPosao" name="mandatory_prijavaInput_adresa">
+              <inputNames>prijavaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_Tc_YdHLKEey8rZGamqsT1g" expression="prijavaInput?.stepen_strucne_spteme != null" errorMessage="Obrazovanje is mandatory for PrijavaZaPosao" name="mandatory_prijavaInput_stepen_strucne_spteme">
+              <inputNames>prijavaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_Tc_YdXLKEey8rZGamqsT1g" expression="!prijavaInput?.stepen_strucne_spteme || prijavaInput?.stepen_strucne_spteme?.persistenceId_string" errorMessage="Obrazovanje must reference an existing instance with a persistenceId for PrijavaZaPosao" name="aggregation_prijavaInput_stepen_strucne_spteme">
+              <inputNames>prijavaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_Tc_YdnLKEey8rZGamqsT1g" expression="prijavaInput?.cv != null" errorMessage="cv is mandatory for PrijavaZaPosao" name="mandatory_prijavaInput_cv">
+              <inputNames>prijavaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_Tc_Yd3LKEey8rZGamqsT1g" expression="prijavaInput?.propratno_pismo != null" errorMessage="propratno_pismo is mandatory for PrijavaZaPosao" name="mandatory_prijavaInput_propratno_pismo">
+              <inputNames>prijavaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_Tc_YeHLKEey8rZGamqsT1g" expression="prijavaInput?.datum_kreiranja != null" errorMessage="datum_kreiranja is mandatory for PrijavaZaPosao" name="mandatory_prijavaInput_datum_kreiranja">
+              <inputNames>prijavaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_Tc_YeXLKEey8rZGamqsT1g" expression="prijavaInput?.ponuda_za_posao != null" errorMessage="PonudaZaPosao is mandatory for PrijavaZaPosao" name="mandatory_prijavaInput_ponuda_za_posao">
+              <inputNames>prijavaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_Tc_YenLKEey8rZGamqsT1g" expression="!prijavaInput?.ponuda_za_posao || prijavaInput?.ponuda_za_posao?.persistenceId_string" errorMessage="PonudaZaPosao must reference an existing instance with a persistenceId for PrijavaZaPosao" name="aggregation_prijavaInput_ponuda_za_posao">
+              <inputNames>prijavaInput</inputNames>
+            </constraints>
+          </contract>
+          <expectedDuration xmi:type="expression:Expression" xmi:id="__BasIHLJEey8rZGamqsT1g" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
+        </elements>
+      </elements>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_2X878HLJEey8rZGamqsT1g" name="prijava" dataType="_pq5_k3K6EeyL45GqIi9CJQ" className="mas_it_company.model.PrijavaZaPosao">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_2X878XLJEey8rZGamqsT1g" name="" content="" interpreter="GROOVY"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_bDPzoHLUEey8rZGamqsT1g" name="danasnji_datum" dataType="_pq5_jHK6EeyL45GqIi9CJQ">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_bDRBwHLUEey8rZGamqsT1g" name="init_danasnji_datum()" content="import java.time.LocalDateTime&#xD;&#xA;&#xD;&#xA;return LocalDateTime.now()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.Date" returnTypeFixed="true"/>
+      </data>
+      <formMapping xmi:type="process:FormMapping" xmi:id="_pq5_c3K6EeyL45GqIi9CJQ">
+        <targetForm xmi:type="expression:Expression" xmi:id="_IoRGEHLUEey8rZGamqsT1g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </formMapping>
+      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_pq5_dXK6EeyL45GqIi9CJQ">
+        <targetForm xmi:type="expression:Expression" xmi:id="_pq5_dnK6EeyL45GqIi9CJQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </overviewFormMapping>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_plJX0HLJEey8rZGamqsT1g" target="__BYP4HLJEey8rZGamqsT1g" source="_pq5_YnK6EeyL45GqIi9CJQ">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_plLNAHLJEey8rZGamqsT1g"/>
+        <condition xmi:type="expression:Expression" xmi:id="_plMbIHLJEey8rZGamqsT1g" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <actors xmi:type="process:Actor" xmi:id="_QjF7gHK8EeyL45GqIi9CJQ" name="Kandidat" initiator="true"/>
+      <actors xmi:type="process:Actor" xmi:id="_SIx1AHK-Eey8rZGamqsT1g" name="Clan tima"/>
+      <actors xmi:type="process:Actor" xmi:id="_WsKgoHK-Eey8rZGamqsT1g" name="HR sluzbenik"/>
+      <actors xmi:type="process:Actor" xmi:id="_s3y1UHK-Eey8rZGamqsT1g" name="Admin"/>
+      <contract xmi:type="process:Contract" xmi:id="_pq5_e3K6EeyL45GqIi9CJQ"/>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_pq5_fHK6EeyL45GqIi9CJQ">
+        <name xmi:type="expression:Expression" xmi:id="_pq5_fXK6EeyL45GqIi9CJQ" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_pq5_fnK6EeyL45GqIi9CJQ" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_pq5_f3K6EeyL45GqIi9CJQ">
+        <name xmi:type="expression:Expression" xmi:id="_pq5_gHK6EeyL45GqIi9CJQ" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_pq5_gXK6EeyL45GqIi9CJQ" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_pq5_gnK6EeyL45GqIi9CJQ">
+        <name xmi:type="expression:Expression" xmi:id="_pq5_g3K6EeyL45GqIi9CJQ" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_pq5_hHK6EeyL45GqIi9CJQ" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_pq5_hXK6EeyL45GqIi9CJQ">
+        <name xmi:type="expression:Expression" xmi:id="_pq5_hnK6EeyL45GqIi9CJQ" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_pq5_h3K6EeyL45GqIi9CJQ" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_pq5_iHK6EeyL45GqIi9CJQ">
+        <name xmi:type="expression:Expression" xmi:id="_pq5_iXK6EeyL45GqIi9CJQ" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_pq5_inK6EeyL45GqIi9CJQ" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+    </elements>
+    <datatypes xmi:type="process:BooleanType" xmi:id="_pq5_i3K6EeyL45GqIi9CJQ" name="Boolean"/>
+    <datatypes xmi:type="process:DateType" xmi:id="_pq5_jHK6EeyL45GqIi9CJQ" name="Date"/>
+    <datatypes xmi:type="process:IntegerType" xmi:id="_pq5_jXK6EeyL45GqIi9CJQ" name="Integer"/>
+    <datatypes xmi:type="process:LongType" xmi:id="_pq5_jnK6EeyL45GqIi9CJQ" name="Long"/>
+    <datatypes xmi:type="process:DoubleType" xmi:id="_pq5_j3K6EeyL45GqIi9CJQ" name="Double"/>
+    <datatypes xmi:type="process:StringType" xmi:id="_pq5_kHK6EeyL45GqIi9CJQ" name="Text"/>
+    <datatypes xmi:type="process:JavaType" xmi:id="_pq5_kXK6EeyL45GqIi9CJQ" name="Java_object"/>
+    <datatypes xmi:type="process:XMLType" xmi:id="_pq5_knK6EeyL45GqIi9CJQ" name="XML"/>
+    <datatypes xmi:type="process:BusinessObjectType" xmi:id="_pq5_k3K6EeyL45GqIi9CJQ" name="Business_Object"/>
+  </process:MainProcess>
+  <notation:Diagram xmi:id="_pq5_lHK6EeyL45GqIi9CJQ" type="Process" element="_pq5YUHK6EeyL45GqIi9CJQ" name="MyDiagram" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_pq5_lXK6EeyL45GqIi9CJQ" type="2007" element="_pq5_YHK6EeyL45GqIi9CJQ">
+      <children xmi:type="notation:DecorationNode" xmi:id="_pq5_lnK6EeyL45GqIi9CJQ" type="5008"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_pq5_l3K6EeyL45GqIi9CJQ" type="7001">
+        <children xmi:type="notation:Node" xmi:id="_pq5_mHK6EeyL45GqIi9CJQ" type="3007" element="_pq5_YXK6EeyL45GqIi9CJQ">
+          <children xmi:type="notation:DecorationNode" xmi:id="_pq5_mXK6EeyL45GqIi9CJQ" type="5007"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_pq5_mnK6EeyL45GqIi9CJQ" type="7002">
+            <children xmi:type="notation:Shape" xmi:id="_pq5_nnK6EeyL45GqIi9CJQ" type="3002" element="_pq5_YnK6EeyL45GqIi9CJQ" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_pq5_n3K6EeyL45GqIi9CJQ" type="5024">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_pq5_oHK6EeyL45GqIi9CJQ" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pq5_oXK6EeyL45GqIi9CJQ" x="53" y="68"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="__BbTMHLJEey8rZGamqsT1g" type="3005" element="__BYP4HLJEey8rZGamqsT1g" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="__BchUHLJEey8rZGamqsT1g" type="5005"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__BbTMXLJEey8rZGamqsT1g" x="182" y="58" width="100" height="50"/>
+            </children>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_pq5_onK6EeyL45GqIi9CJQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_pq5_o3K6EeyL45GqIi9CJQ" fontName="Segoe UI"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_pq5_pHK6EeyL45GqIi9CJQ"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_pq5_pXK6EeyL45GqIi9CJQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pq5_pnK6EeyL45GqIi9CJQ"/>
+        </children>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_pq5_p3K6EeyL45GqIi9CJQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_pq5_qHK6EeyL45GqIi9CJQ" fontName="Segoe UI"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_pq5_qXK6EeyL45GqIi9CJQ"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_pq5_qnK6EeyL45GqIi9CJQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pq5_q3K6EeyL45GqIi9CJQ" width="1320" height="250"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_pq5_rHK6EeyL45GqIi9CJQ"/>
+    <edges xmi:type="notation:Connector" xmi:id="_plRToHLJEey8rZGamqsT1g" type="4001" element="_plJX0HLJEey8rZGamqsT1g" source="_pq5_nnK6EeyL45GqIi9CJQ" target="__BbTMHLJEey8rZGamqsT1g" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_plTv4HLJEey8rZGamqsT1g" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_plTv4XLJEey8rZGamqsT1g" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_plRToXLJEey8rZGamqsT1g" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_plRTonLJEey8rZGamqsT1g" points="[-11, 1, -113, 19]$[99, -19, -3, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pliZYHLJEey8rZGamqsT1g" id="(1.0,0.9)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pliZYXLJEey8rZGamqsT1g" id="(0.03,0.38)"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>
